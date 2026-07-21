@@ -1,0 +1,184 @@
+body {
+    background-color: #364b3a;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #d9cdcd;
+    margin-bottom: 40px;
+}
+
+/* --- NEU: Styling für die h2-Überschriften --- */
+h2 {
+    color: #078c1d;
+    /* Ein moderner Akzentton (z.B. softes Lila), passend zum Dark Mode */
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    padding-bottom: 10px;
+    margin-left: 50px;
+    border-bottom: 1px solid #455048;
+    width: fit-content;
+}
+
+h3 {
+    color: #057d9b;
+    /* Ein moderner Akzentton (z.B. softes Lila), passend zum Dark Mode */
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    padding-bottom: 10px;
+    margin-left: 50px;
+    border-bottom: 1px solid #455048;
+    width: fit-content;
+}
+
+/* --- HIER WURDE DIE ZENTRIERUNG KORRIGIERT --- */
+.noten-container {
+    width: 100%;
+    max-width: 1600px;
+    /* Verhindert, dass der Container unendlich breit wird */
+    margin: 0 auto 40px auto;
+    /* 'auto' zentriert den Container perfekt in der Mitte */
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    /* Sorgt dafür, dass Padding die Breite nicht sprengt */
+}
+
+.noten svg {
+    filter: invert(0.35) hue-rotate(180deg);
+}
+
+/* Zentriert die Notenlinien-Grafiken von ABCjs */
+.noten {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* Der Filter bleibt wie er war, sorgt für die richtige Helligkeit im Dark Mode */
+.noten svg {
+    filter: invert(0.35) hue-rotate(180deg);
+    display: inline-block;
+    /* Hilft bei der korrekten Zentrierung des SVGs */
+}
+
+/* --- Styling für die Notenwert-Tabelle --- */
+.noten-tabelle {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Damit die runden Ecken sichtbar bleiben */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.noten-tabelle th {
+    background-color: #175b26;
+    /* Das dunklere Blau aus deinem Bild, angepasst für Dark Mode */
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.noten-tabelle td {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+
+/* Entfernt den rechten Rand bei der letzten Spalte */
+.noten-tabelle td:last-child {
+    border-right: none;
+}
+
+/* Macht die Unicode-Notensymbole größer und gut lesbar */
+.noten-tabelle .musik-symbol {
+    font-size: 1rem;
+    line-height: 0.5;
+    vertical-align: middle;
+}
+
+
+.note-render {
+    display: inline-block;
+    width: 20px;
+    height: -10px;
+    overflow: hidden;
+    /* Schneidet unnötige Ränder der Notenlinien ab */
+}
+
+/* Da du bereits einen Filter für .noten svg hast, sorgt das hier dafür, 
+   dass auch die Tabellen-Noten im Dark Mode hell angezeigt werden */
+.note-render svg {
+    filter: invert(0.3) hue-rotate(180deg);
+    vertical-align: middle;
+}
+
+.noten-tabelle td {
+    padding: 5px 12px;
+    /* Etwas weniger Padding, da das SVG schon Platz mitbringt */
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+
+/* --- Styling für den Liedtext --- */
+.lied {
+    max-width: 600px;
+    /* Begrenzt die Breite, damit die Zeilen nicht auseinanderfliegen */
+    margin: 40px auto;
+    /* Zentriert den gesamten Textblock im Container */
+    text-align: left;
+    /* Hält den eigentlichen Text linksbündig für die Lesbarkeit */
+    font-family: 'Georgia', serif;
+    /* Eine Serifenschrift wirkt bei Liedtexten oft eleganter */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* Angenehmer Zeilenabstand */
+    color: #d9cdcd;
+    padding-left: 20px;
+    border-left: 3px solid #078c1d;
+    /* Passt optisch zu deiner h3-Überschrift (Maqam) */
+}
+
+
+
+
+/* Inhaltsverzeichnis Styling */
+#table-of-contents {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 50px;
+}
+
+#table-of-contents li {
+    margin-bottom: 8px;
+}
+
+#table-of-contents a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+#table-of-contents a:hover {
+    text-decoration: underline;
+    color: #05963d;
+}

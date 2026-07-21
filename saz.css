@@ -1,0 +1,363 @@
+.saaz {
+    display: flex;
+    flex-direction: row;
+    height: 420px;
+    width: 100%;
+    padding-top: 90px;
+}
+
+.band {
+    position: relative;
+    display: inline-flex;
+    width: 94%;
+    height: 160px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 40px;
+    padding: 20px;
+    background-color: white;
+    box-sizing: border-box;
+
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+
+
+.rest {
+
+    display: inline-flex;
+
+    height: 200px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 40px;
+    border-radius: 40px 0px 0px 40px;
+    padding: 20px;
+    margin-left: -6px;
+    margin-top: -20px;
+    width: 53px;
+    margin-right: -200px;
+    background-color: white;
+    box-sizing: border-box;
+    border-right: 5px solid rgb(139, 5, 30);
+}
+
+.menu_n {
+    position: relative;
+    display: inline-flex;
+
+    height: 160px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 40px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px;
+    background-color: white;
+    box-sizing: border-box;
+    border-right: none;
+
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    border-left: 3px solid rgb(15, 13, 13);
+    position: relative;
+    z-index: 2;
+}
+
+.first_n {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    border-right: 3px solid rgb(15, 13, 13);
+    position: relative;
+    z-index: 2;
+}
+
+
+.punkt {
+    width: 14px;
+    height: 14px;
+    background-color: rgb(67, 61, 61);
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.saiten-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 108%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+    box-sizing: border-box;
+    z-index: 1;
+    pointer-events: none;
+
+}
+
+.saiten-gruppe {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.oben {
+    margin-top: 29px;
+    margin-bottom: 26px;
+}
+
+.size_s {
+    width: 36px;
+}
+
+.size_m {
+    width: 55px;
+}
+
+.size_2 {
+    width: 100px;
+}
+
+.size_1 {
+    width: 55px;
+}
+
+.size_3 {
+    width: 120px;
+}
+
+.size_xl {
+    width: 200px;
+    border-right: 3px solid rgb(220, 3, 3);
+}
+
+
+.size_xl_n {
+    width: 200px;
+    border-left: 3px solid rgb(220, 3, 3);
+}
+
+.saite {
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(86, 30, 30);
+    position: relative;
+    /* Wichtig für die Positionierung der Note */
+}
+
+._noten {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+}
+
+.noten_do {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(80%) translateY(-370%);
+
+    line-height: 1;
+}
+
+.noten_si_b {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(65%) translateY(-60%);
+
+    line-height: 1;
+}
+
+.noten_si_2 {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(10%) translateY(-60%);
+
+    line-height: 1;
+}
+
+.noten_fa {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(80%) translateY(260%);
+
+    line-height: 1;
+}
+
+.noten_mi {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(20%) translateY(260%);
+
+    line-height: 1;
+}
+
+.noten_la_2 {
+    font-size: 10px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(60%) translateY(-50%);
+
+    line-height: 1;
+}
+
+.noten_sol {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(10%) translateY(260%);
+
+    line-height: 1;
+}
+
+.noten_si_dias {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(60%) translateY(-60%);
+
+    line-height: 1;
+}
+
+
+.noten_2 {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 4px;
+
+    position: absolute;
+    top: 10%;
+    transform: translateY(-30%);
+    line-height: 1;
+}
+
+.noten_3 {
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    margin-left: 8px;
+
+    position: absolute;
+    top: 10%;
+    transform: translateY(-30%);
+    line-height: 1;
+}
+
+.test {
+    color: white;
+    transform: translateY(-180%);
+    height: 50px;
+    justify-content: center;
+    display: flex;
+
+}
+
+.test_unten {
+    color: white;
+    transform: translateY(170%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Hinweis {
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    width: 200px;
+    transform: translateY(130%);
+    flex-direction: column;
+}
+
+
+
+.pfeil-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    /* Beliebige Breite */
+}
+
+.pfeil-linie {
+    flex: 1;
+    border-bottom: 2px solid white;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 2px;
+    /* Abstand zur Linie */
+}
+
+.pfeil-spitze {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid white;
+    margin-top: 36px;
+}
+
+.pfeil-spitze-links {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 8px solid white;
+    /* Nach links zeigende Spitze */
+    margin-top: 36px;
+}

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Musikunterricht</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.2.2/abcjs-basic-min.js" type="text/javascript"></script>
+    <script src="musik.js"></script>
+
+    <link rel="stylesheet" href="musik.css">
+    <link rel="stylesheet" href="saz.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <h1>
+        Musik
+    </h1>
+
+    <div class="noten-container" id="toc-container">
+    <h2>Inhaltsverzeichnis</h2>
+    <ul id="table-of-contents"></ul>
+</div>
+
+
+
+
+    <div class="noten-container saaz">
+
+
+        <div class="band">
+
+            <div class="saiten-container">
+                <div class="saiten-gruppe">
+                    <div class="saite">
+
+                        <div class="test">
+
+                            <div class="pfeil-container">
+                                <div class="pfeil-linie" style="padding-bottom: 10px; font-size: 22px;">Dias</div>
+                                <div class="pfeil-spitze"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="test_unten">
+
+                            <div class="pfeil-container">
+                                <div class="pfeil-spitze-links"></div>
+                                <div class="pfeil-linie" style="padding-bottom: 10px; font-size: 22px;">B-moul</div>
+                            </div>
+
+                        </div>
+
+                        <div class="Hinweis">
+                            SI' : SI halb_B-moul <br>
+                            SI'': SI_B-moul <br>
+                            SI* : SI_Dias
+
+                        </div>
+
+                    </div>
+                    <div class="saite"></div>
+                </div>
+
+                <div class="saiten-gruppe">
+                    <div class="saite"></div>
+                    <div class="saite"></div>
+                </div>
+
+                <div class="saiten-gruppe">
+                    <div class="saite"></div>
+                    <div class="saite"></div>
+                    <div class="saite"></div>
+                </div>
+            </div>
+
+            <!-- Vertikale Bünde & Bünde-Punkte -->
+
+            <div class="first_n size_xl_n"></div>
+
+            <div class="first_n size_m"></div>
+            <div class="first_n size_m">
+
+
+                <div class="punkt"></div>
+                <div class="noten_la_2">LA</div>
+                <div class="noten_mi">MI</div>
+            </div>
+
+
+
+            <div class="first_n size_3">
+                <div class="noten_do">DO</div>
+                <div class="noten_si_b">SI''</div>
+                <div class="noten_fa">FA</div>
+
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_m">
+                <div class="noten_si_2">SI'</div>
+            </div>
+
+            <div class="first_n size_m">
+                <div class="noten_si_2">SI</div>
+            </div>
+
+            <div class="first_n size_2">
+                <div class="noten_si_dias">SI*</div>
+                <div class="noten_sol">SOL</div>
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_2"></div>
+
+
+            <div class="first_n size_1"></div>
+
+            <div class="first_n size_1">
+                <div class="noten_sol">LA</div>
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_2">
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_1"></div>
+            <div class="first_n size_1"></div>
+
+            <div class="first_n size_2">
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_2 "></div>
+
+            <div class="first_n size_s"></div>
+
+            <div class="first_n">
+                <div class="punkt"></div>
+            </div>
+
+            <div class="first_n size_2"></div>
+
+            <div class="first_n size_m" style="flex-direction: column; margin-right: -15px;">
+                <div class="punkt oben"></div>
+                <div class="punkt unten"></div>
+            </div>
+
+        </div>
+
+        <div class="menu_n">
+            <div class="saiten-container">
+                <div class="saiten-gruppe">
+                    <div class="saite">
+                        <div class="noten_3">LA</div>
+                    </div>
+                    <div class="saite"></div>
+                </div>
+
+                <div class="saiten-gruppe">
+                    <div class="saite">
+                        <div class="noten_2">SOL</div>
+                    </div>
+                    <div class="saite"></div>
+                </div>
+
+                <div class="saiten-gruppe">
+                    <div class="saite">
+                    </div>
+                    <div class="saite">
+                        <div class="_noten">RE</div>
+                    </div>
+                    <div class="saite"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rest"></div>
+
+    </div>
+
+
+
+
+
+    <div class="noten-container">
+        <h2>2,5 Oktaven (Gesamtübersicht)</h2>
+        <div class="noten">
+            L: 1
+            la si do re mi fa sol | 2la 2si 2do 2re 2mi 2fa 2sol | 3la 3si 3do |
+            w: La Si Do Re Mi Fa Sol La Si Do Re Mi Fa Sol La Si Do
+        </div>
+
+        <h2>Große Oktave (teilweise) & Kleine Oktave</h2>
+        <div class="noten">
+            L: 1
+            la si do re mi fa sol |
+            w: La Si Do Re Mi Fa Sol
+
+        </div>
+
+        <h2>Kleine Oktave (Ende) & Eingestrichene Oktave</h2>
+        <div class="noten">
+            L: 1
+            2la 2si 2do 2re 2mi 2fa 2sol |
+            w: La Si Do Re Mi Fa Sol
+        </div>
+
+        <h2>Zweigestrichene Oktave (Anfang)</h2>
+        <div class="noten">
+            L: 1
+            3la 3si 3do |
+            w: La Si Do
+        </div>
+    </div>
+
+    <div class="noten-container">
+        <h2>Notenwerte und Symbole</h2>
+        <table class="noten-tabelle">
+            <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Nom (Name)</th>
+                    <th>Valeur (Wert)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Ganze Note (Kopf ohne Hals) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n[A8]"></div>
+                    </td>
+                    <td>La ronde (Ganze Note)</td>
+                    <td>4 temps (4 Schläge)</td>
+                </tr>
+                <tr>
+                    <!-- Halbe Note -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n[A4]"></div>
+                    </td>
+                    <td>La blanche (Halbe Note)</td>
+                    <td>2 temps (2 Schläge)</td>
+                </tr>
+                <tr>
+                    <!-- Viertelnote -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n[A2]"></div>
+                    </td>
+                    <td>La noire (Viertelnote)</td>
+                    <td>1 temps (1 Schlag)</td>
+                </tr>
+                <tr>
+                    <!-- Achtelnote -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n[A]"></div>
+                    </td>
+                    <td>La croche (Achtelnote)</td>
+                    <td>1/2 temps (1/2 Schlag)</td>
+                </tr>
+                <tr>
+                    <!-- Sechzehntelnote -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n[A/]"></div>
+                    </td>
+                    <td>La double croche (Sechzehntelnote)</td>
+                    <td>1/4 temps (1/4 Schlag)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="noten-container">
+        <h2>Nom du silence (Pausenwerte)</h2>
+        <table class="noten-tabelle">
+            <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Nom (Name)</th>
+                    <th>Durée (Wert)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Ganze Pause -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\nz8"></div>
+                    </td>
+                    <td>Pause</td>
+                    <td>4 temps (4 Schläge)</td>
+                </tr>
+                <tr>
+                    <!-- Halbe Pause -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\nz4"></div>
+                    </td>
+                    <td> Demi-pause</td>
+                    <td>2 temps (2 Schläge)</td>
+                </tr>
+                <tr>
+                    <!-- Viertelpause -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\nz2"></div>
+                    </td>
+                    <td>Soupir</td>
+                    <td>1 temps (1 Schlag)</td>
+                </tr>
+                <tr>
+                    <!-- Achtelpause -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\nz"></div>
+                    </td>
+                    <td>Demi-soupir</td>
+                    <td>1/2 temps (1/2 Schlag)</td>
+                </tr>
+                <tr>
+                    <!-- Sechzehntelpause -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\nz/"></div>
+                    </td>
+                    <td>Quart de soupir</td>
+                    <td>1/4 temps (1/4 Schlag)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="noten-container">
+        <h2>la, mi</h2>
+        <div class="noten">
+            Q: 1/4=80
+            L: 1/4
+            [M:4/4] la4 | la4 | mi4 | mi4|
+            w: 1
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            la4 | mi4 | la4 | mi4|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            la2 la2 | mi2 mi2| nz2 la2 | nz4|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            mi la la mi | mi mi la la | nz4 | mi2 la2|
+        </div>
+
+
+        <div class="noten">
+            L: 1/4
+            la2 la2 | mi2 mi2 | nz2 la2| nz4|
+        </div>
+
+        <h2>la, mi re</h2>
+
+        <div class="noten">
+            L: 1/4
+            la2 re2| mi2 mi2 | re2 la2 | mi2 re2|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            |: re2 re2 | mi2 mi2 | la2 re2 | mi2 re2 |
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            la4 | mi4 | nz4 | la la la la|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            mi2 mi2 | faulenzer | la la mi mi | re re la la :| |
+        </div>
+
+
+    </div>
+
+    <div class="noten-container">
+        <div class="noten">
+            Q: 1/4=80
+            L: 1/4
+            [M:4/4] do do sol sol | 2la 2la sol2 | fa fa mi mi | re re do2 |
+            w: 1
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            sol sol fa fa | mi mi re2 | sol sol fa fa | mi mi re2 |
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            do do sol sol | 2la la sol2 | fa fa mi mi | re re do2
+        </div>
+
+
+    </div>
+
+    <div class="noten-container">
+        <div class="noten">
+            L: 1/4
+            [M:4/4] la si do re | mi fa sol 2la | 2la sol fa mi | re do si la|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            do do do do | mi mi mi mi | fa fa fa fa | sol sol sol sol |
+
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            2la 2la 2la 2la | 2la 2la 2la 2la | mi mi mi mi | re re re re|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            2la2 2la2 | sol sol sol sol | mi mi mi mi | re re re re|
+        </div>
+
+        <div class="noten">
+            L: 1/4
+            do do do do | do do do do | la la la la | la la la la|
+        </div>
+
+        <div class="noten">
+            L: 1/8
+            do_re do_re do_re do_re | mi_fa mi_fa mi_fa mi_fa | sol_2la sol_2la sol_2la sol_2la | nz4 |
+        </div>
+    </div>
+
+
+    <div class="noten-container">
+        <h2>Vorzeichen (Maqam-Intervalle)</h2>
+        <table class="noten-tabelle maqam-tabelle">
+            <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Nom (Name)</th>
+                    <th>Description (Bedeutung)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Kreuz (Diesis) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n^A"></div>
+                    </td>
+                    <td class="arab-text red-text">دييز</td>
+                    <td class="arab-text blue-text">رفع النغمة<br>نصف درجة</td>
+                </tr>
+                <tr>
+                    <!-- Be (Bemol) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n_A"></div>
+                    </td>
+                    <td class="arab-text red-text">بيمول</td>
+                    <td class="arab-text blue-text">خفض النغمة<br>نصف درجة</td>
+                </tr>
+                <tr>
+                    <!-- Halbes Be / Koron (Viertelton tiefer) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK\n_A"></div>
+                    </td>
+                    <td class="arab-text red-text">نصف بيمول</td>
+                    <td class="arab-text blue-text">خفض النغمة<br>ربع درجة</td>
+                </tr>
+
+
+
+                <tr>
+                    <!-- Auflösungszeichen (Bikar) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n=A"></div>
+                    </td>
+                    <td class="arab-text red-text">بيكار</td>
+                    <td class="arab-text blue-text">إلغاء علامات<br>التحويل</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="noten-container">
+        <h2>De Lorî Lorî</h2>
+
+        <h3>Maqam : Kurd LA</h3>
+        <div class="noten">
+            Q: 1/4=70
+            L: 1/16
+            [M:4/4] mi2_fa2 mi2_fa2 re2_re_re re2_re_re | mi2_fa2 sol2_fa2 mi2_mi_mi mi2_mi_mi :|
+        </div>
+
+        <div class="lied">
+            De lorî lorî kurê min lorî <br>
+            Bavê te kuştin dayik bi gorî <br><br>
+
+            Gernas û mêrxas divê tu negrî <br>
+            Şênî ku sax bin nema tu bimrî <br>
+            Dujmin bi top û firok û leşker <br>
+            Bombardiman kir welat li her der <br>
+            Hilweşandin tev mizgeft û dîwar <br>
+            Kûr kûr dinalin jar û brîndar <br>
+            Zar û zêçên Kurd pir têne kuştin <br>
+            Dexl û rez û pez tiştek nehiştin <br>
+
+            Tazî û birçî kir banger û berf <br>
+            Wan venaşêrin van şikeft û berqef <br>
+            Li ser zikê xwe diçin bi mestî <br>
+            Hin dest û hin pê, hin ser şikestî <br>
+            Di şevreşan de gernas e rêber <br>
+            Şêrê brîndar dema diçin şer <br> <br>
+
+            De lorî lorî kurê min lorî <br>
+            Bavê te kuştin dayik bi gorî <br> <br>
+
+            Gelê hişyar e gelek giha ye <br>
+            Tiving di dest e li ser çiya ye <br>
+            Sêr û piling in hawîr dibazin <br>
+            Doza me Kurdan serbest dixwazin <br>
+            Bi xwîn nivîsîn li ser zinaran <br>
+            Livir nemaye cîyê neyaran <br>
+            Bi qeşte dujmin qada me berde <br>
+            Ev der welatê gernasê Kurd e <br>
+            Qada me berdin ji bo me yekser <br>
+            Em aştîxwaz in me navê ev şer <br>
+            Em jî wekî we divên serbesti <br>
+            Ma kî dixwaze dîlî û bindestî
+        </div>
+    </div>
+
+
+    <div class="noten-container">
+        <h2>Lê dînê</h2>
+
+        <div class="noten">
+            Q: 1/4=80
+            L: 1/16
+            [M:12/8] do2_re2_re2 re2_re2_sol2 fa2_mi2_fa2 sol2 sol4 | sol2_sol2_fa2 fa2_re2_fa2 mi4 fa2 re2 re4 :|
+        </div>
+
+        <div class="lied">
+
+
+
+            Tu miraza xortanî lê dînê <br>
+            Lêlê dînê lê dînê tew dînê <br> <br>
+
+            Gerden sisê qor mircan<br>
+            lê dînê Lêlê dînê lê dînê<br>
+            tew dînê <br><br>
+
+            Tu civata xortanî lê dînê <br>
+            Lêlê dînê lê dînê tew dînê <br><br>
+
+            Destê xwe bid destê min <br>
+            lê dînê Lêlê dînê lê dînê <br>
+            tew dînê<br><br>
+
+            Tu miraza xortanî lê dînê <br>
+            Lêlê dînê lê dînê tew dînê
+
+        </div>
+    </div>
+
+    <div class="noten-container">
+        <h2>Bûkê Delalê</h2>
+
+        <div class="noten">
+            Q: 1/4=100
+            L: 1/16
+            do4 si2_si2 do4 si4 | la2_la2 la4 si4 la4 :: re4 do2_do2 re4 do4|
+            si4 si2_si2 do4 si4 | do4 si2_si2 do4 si4 | la2_la2 la4 si4 la4 :|
+        </div>
+
+        <div class="lied">
+            Bûkê Delalê rabe xwe bake <br>
+            Xemla xwe girêde bi ser xwe de dake<br>
+            Şûşa miskê serê xwe dake <br>
+            Zava şêrinê xortekî pak e <br><br>
+
+            Bûkê delalê bûka Kurda yî <br>
+            Tu bedew î rewşa mala yî <br>
+            Gulek sor î rokê buhar î <br>
+            Tu ezîza ber dilê Zava yî <br><br>
+
+            (Dîsgotin) <br><br>
+
+            Bûkê delalê bûka Kurda yî<br>
+            Tu kulîlka nava erda yî <br>
+            Wele tu şêrin î <br><br>
+
+            Bûkê delalê megir menale<br>
+            Girî û gazin ji tera bê fayde ye<br>
+            Zava hêj aye bi dilê te ye<br>
+            Zava delal e bi dilê te ye
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="noten-container" style="display: none;">
+        <h2>Notennamen im Vergleich</h2>
+        <table class="noten-tabelle">
+            <thead>
+                <tr>
+                    <th>Notes en Anglais </th>
+
+                    <th>Notes en Français </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>C</td>
+                    <td>DO</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>RÉ</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>MI</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>FA</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>SOL</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>LA</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>SI</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Übersicht der Oktaven und Tonsilben</h2>
+        <table class="noten-tabelle">
+            <thead>
+                <tr>
+                    <th>Note</th>
+                    <th>Nom</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- ZWISCHENHEADER 1 -->
+                <tr class="tabellen-zwischenheader">
+                    <td colspan="2">Große Oktave (teilweise) & Kleine Oktave (Teil 1)</td>
+                </tr>
+                <tr>
+                    <td>A,</td>
+                    <td>LA</td>
+                </tr>
+                <tr>
+                    <td>B,</td>
+                    <td>SI</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>DO</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>RÉ</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>MI</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>FA</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>SOL</td>
+                </tr>
+
+                <!-- ZWISCHENHEADER 2 -->
+                <tr class="tabellen-zwischenheader">
+                    <td colspan="2">Kleine Oktave (Ende) & Eingestrichene Oktave</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>LA</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>SI</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>DO</td>
+                </tr>
+                <tr>
+                    <td>d</td>
+                    <td>RÉ</td>
+                </tr>
+                <tr>
+                    <td>e</td>
+                    <td>MI</td>
+                </tr>
+                <tr>
+                    <td>f</td>
+                    <td>FA</td>
+                </tr>
+                <tr>
+                    <td>g</td>
+                    <td>SOL</td>
+                </tr>
+
+                <!-- ZWISCHENHEADER 3 -->
+                <tr class="tabellen-zwischenheader">
+                    <td colspan="2">Zweigestrichene Oktave (Anfang)</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>LA</td>
+                </tr>
+                <tr>
+                    <td>b</td>
+                    <td>SI</td>
+                </tr>
+                <tr>
+                    <td>c'</td>
+                    <td>DO</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tocList = document.getElementById("table-of-contents");
+    // Alle h2-Überschriften auf der Seite auswählen (ausgenommen die h2 des Inhaltsverzeichnisses selbst)
+    const headings = document.querySelectorAll(".noten-container:not(#toc-container) h2");
+
+    headings.forEach((heading, index) => {
+        // Prüfen, ob das Element sichtbar ist (ignoriert display: none)
+        if (heading.offsetParent === null) return;
+
+        // ID für die Überschrift vergeben, falls noch keine vorhanden ist
+        if (!heading.id) {
+            heading.id = "section-" + index;
+        }
+
+        // Listenelement und Link erstellen
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        
+        a.textContent = heading.textContent;
+        a.href = "#" + heading.id;
+
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
+});
+</script>
+
+
+</body>
+
+</html>
