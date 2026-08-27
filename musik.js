@@ -136,10 +136,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         element.textContent = "";
 
-        // Zeichnen durch ABCJS
+        
+
+        // Zeichnen durch ABCJS (VORHER: scale: 2, staffwidth: 1100)
         ABCJS.renderAbc(element, notation, {
-            scale: 2,
-            staffwidth: 1100
+            responsive: "resize",
+            staffwidth: 740,
+            add_classes: true
         });
 
         // --- FAULENZER INTEGRATION ---
