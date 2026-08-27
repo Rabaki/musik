@@ -589,25 +589,23 @@ a:focus-visible {
 }
 
 @media (max-width: 768px) {
-    /* 1. Verhindert, dass der äußere Rahmen Noten hart abschneidet */
+    /* Verhindert, dass der umgebende Container überstehende Pixel abschneidet */
     .noten-container {
-        overflow: visible; /* oder overflow-x: auto */
-        padding: 16px 10px;
+        overflow-x: hidden;
+        padding: 16px 12px;
     }
 
-    /* 2. Scrollbarer Container für sehr lange Notenzeilen */
+    /* SVG-Grafik flexibel an die Displaybreite anpassen */
     .noten {
         width: 100% !important;
-        overflow-x: auto !important;
+        overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        display: block;
     }
 
-    /* 3. Zwingt das SVG in die Bildschirmbreite */
     .noten svg {
         width: 100% !important;
-        min-width: 0 !important;
+        max-width: 100% !important;
         height: auto !important;
-        box-sizing: border-box;
+        display: block;
     }
 }
