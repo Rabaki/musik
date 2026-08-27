@@ -5,185 +5,38 @@
     <meta charset="UTF-8">
     <title>Musikunterricht</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.2.2/abcjs-basic-min.js" type="text/javascript"></script>
-    <script src="musik.js"></script>
+    <script src="index.js"></script>
 
-    <link rel="stylesheet" href="musik.css">
-    <link rel="stylesheet" href="saz.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
 
 <body>
 
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="material-symbols-outlined">music_note</span>
+            <span>Musikunterricht</span>
+        </div>
+
+        <div class="navbar-menu">
+            <a href="#toc-container">Inhalt</a>
+            <button id="theme-toggle" class="theme-btn" aria-label="Theme wechseln">
+                <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+            </button>
+        </div>
+    </nav>
+
     <h1>
-        Musik
+        Musik VERSION2
     </h1>
 
     <div class="noten-container" id="toc-container">
-    <h2>Inhaltsverzeichnis</h2>
-    <ul id="table-of-contents"></ul>
-</div>
-
-
-
-
-    <div class="noten-container saaz">
-
-
-        <div class="band">
-
-            <div class="saiten-container">
-                <div class="saiten-gruppe">
-                    <div class="saite">
-
-                        <div class="test">
-
-                            <div class="pfeil-container">
-                                <div class="pfeil-linie" style="padding-bottom: 10px; font-size: 22px;">Dias</div>
-                                <div class="pfeil-spitze"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="test_unten">
-
-                            <div class="pfeil-container">
-                                <div class="pfeil-spitze-links"></div>
-                                <div class="pfeil-linie" style="padding-bottom: 10px; font-size: 22px;">B-moul</div>
-                            </div>
-
-                        </div>
-
-                        <div class="Hinweis">
-                            SI' : SI halb_B-moul <br>
-                            SI'': SI_B-moul <br>
-                            SI* : SI_Dias
-
-                        </div>
-
-                    </div>
-                    <div class="saite"></div>
-                </div>
-
-                <div class="saiten-gruppe">
-                    <div class="saite"></div>
-                    <div class="saite"></div>
-                </div>
-
-                <div class="saiten-gruppe">
-                    <div class="saite"></div>
-                    <div class="saite"></div>
-                    <div class="saite"></div>
-                </div>
-            </div>
-
-            <!-- Vertikale Bünde & Bünde-Punkte -->
-
-            <div class="first_n size_xl_n"></div>
-
-            <div class="first_n size_m"></div>
-            <div class="first_n size_m">
-
-
-                <div class="punkt"></div>
-                <div class="noten_la_2">LA</div>
-                <div class="noten_mi">MI</div>
-            </div>
-
-
-
-            <div class="first_n size_3">
-                <div class="noten_do">DO</div>
-                <div class="noten_si_b">SI''</div>
-                <div class="noten_fa">FA</div>
-
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_m">
-                <div class="noten_si_2">SI'</div>
-            </div>
-
-            <div class="first_n size_m">
-                <div class="noten_si_2">SI</div>
-            </div>
-
-            <div class="first_n size_2">
-                <div class="noten_si_dias">SI*</div>
-                <div class="noten_sol">SOL</div>
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_2"></div>
-
-
-            <div class="first_n size_1"></div>
-
-            <div class="first_n size_1">
-                <div class="noten_sol">LA</div>
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_2">
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_1"></div>
-            <div class="first_n size_1"></div>
-
-            <div class="first_n size_2">
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_2 "></div>
-
-            <div class="first_n size_s"></div>
-
-            <div class="first_n">
-                <div class="punkt"></div>
-            </div>
-
-            <div class="first_n size_2"></div>
-
-            <div class="first_n size_m" style="flex-direction: column; margin-right: -15px;">
-                <div class="punkt oben"></div>
-                <div class="punkt unten"></div>
-            </div>
-
-        </div>
-
-        <div class="menu_n">
-            <div class="saiten-container">
-                <div class="saiten-gruppe">
-                    <div class="saite">
-                        <div class="noten_3">LA</div>
-                    </div>
-                    <div class="saite"></div>
-                </div>
-
-                <div class="saiten-gruppe">
-                    <div class="saite">
-                        <div class="noten_2">SOL</div>
-                    </div>
-                    <div class="saite"></div>
-                </div>
-
-                <div class="saiten-gruppe">
-                    <div class="saite">
-                    </div>
-                    <div class="saite">
-                        <div class="_noten">RE</div>
-                    </div>
-                    <div class="saite"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="rest"></div>
-
+        <h2>Inhaltsverzeichnis</h2>
+        <ul id="table-of-contents"></ul>
     </div>
-
-
 
 
 
@@ -468,7 +321,12 @@
                 <tr>
                     <!-- Halbes Be / Koron (Viertelton tiefer) -->
                     <td>
-                        <div class="note-render" data-abc="X:1\nK\n_A"></div>
+
+
+                        <div class="note-render" data-abc="X:1\nK:F\nx"></div>
+
+
+
                     </td>
                     <td class="arab-text red-text">نصف بيمول</td>
                     <td class="arab-text blue-text">خفض النغمة<br>ربع درجة</td>
@@ -607,6 +465,107 @@
 
         </div>
     </div>
+
+
+    <div class="noten-container">
+        <h2> Bûka baranê</h2>
+
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3>Gotin û mûzîk : Mem Ararat</h3>
+            <h3 style="margin-right: 200px;">Notakirin: Sîwan</h3>
+        </div>
+
+
+
+
+        <div class="noten">
+            Q: 1/4
+            L: 1/16
+            [M:6/8]
+            K: F
+            re4 do2 do6 | re4 do2 do6 | re4 do2 mi2_re2_do2 | do4 si2 si6 |
+            do4 si2 si6 | do4 si2 si6 | do4 si2 mi2_do2_si2 | [1 si4 la2 la2_si2_do2 :|
+            [2 si4 la2 la6 || si4 la2 la6 | si4 la2 la6 | si4 la2 do2_si2_la2 |
+            [A,12 E12] |: fa4 mi2 mi6 | fa4 mi2 mi6 | fa4 mi2 sol2_fa2_mi2 |
+            mi4 re2 re6 | mi4 re2 re6 | mi4 re2 re6 | mi4 re2 fa2_mi2_re2 |
+            re4 do2 do6 :|
+        </div>
+
+        <div class="lied">
+            <div class="lied-spalten" style="display: flex; gap: 40px; justify-content: space-between;">
+                <!-- Linke Spalte -->
+                <div class="spalte" style="flex: 1;">
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê <br><br>
+
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê tavê <br><br>
+
+                    Çima tu nakenî? <br>
+                    Çima tu na peyivî? <br>
+                    Û li wê valahiyê <br>
+                    Dîsa, sar mayî <br><br>
+
+                    Çima tu nakenî? <br>
+                    Çima tu na peyivî? <br>
+                    Û li wê valahiyê <br>
+                    Wek min mat mayî <br><br>
+
+                    Çima tu nakenî, <br>
+                    Çima tu napeyivî, <br>
+                    Û li wê valahiyê, <br>
+                    Wek mirin mat mayî. <br><br>
+
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê
+                </div>
+
+                <!-- Rechte Spalte -->
+                <div class="spalte" style="flex: 1;">
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê tavê <br><br>
+
+                    Çaxa te dibînim <br>
+                    Di vê jiyana tarî <br>
+                    Ez xembar dibim <br>
+                    Ez birîndar dibim <br><br>
+
+                    Çaxa te dibînim <br>
+                    Di vê jiyana tarî <br>
+                    Ez xembar dibim <br>
+                    Ez dîn û har dibim <br><br>
+
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê <br><br>
+
+                    Yarê, delalê <br>
+                    Bûka baranê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê biharê <br>
+                    Bes e xwe bixemilîne <br>
+                    Bi rengê tavê
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
 
 
 
@@ -756,32 +715,32 @@
     </div>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const tocList = document.getElementById("table-of-contents");
-    // Alle h2-Überschriften auf der Seite auswählen (ausgenommen die h2 des Inhaltsverzeichnisses selbst)
-    const headings = document.querySelectorAll(".noten-container:not(#toc-container) h2");
+        document.addEventListener("DOMContentLoaded", function () {
+            const tocList = document.getElementById("table-of-contents");
+            // Alle h2-Überschriften auf der Seite auswählen (ausgenommen die h2 des Inhaltsverzeichnisses selbst)
+            const headings = document.querySelectorAll(".noten-container:not(#toc-container) h2");
 
-    headings.forEach((heading, index) => {
-        // Prüfen, ob das Element sichtbar ist (ignoriert display: none)
-        if (heading.offsetParent === null) return;
+            headings.forEach((heading, index) => {
+                // Prüfen, ob das Element sichtbar ist (ignoriert display: none)
+                if (heading.offsetParent === null) return;
 
-        // ID für die Überschrift vergeben, falls noch keine vorhanden ist
-        if (!heading.id) {
-            heading.id = "section-" + index;
-        }
+                // ID für die Überschrift vergeben, falls noch keine vorhanden ist
+                if (!heading.id) {
+                    heading.id = "section-" + index;
+                }
 
-        // Listenelement und Link erstellen
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        
-        a.textContent = heading.textContent;
-        a.href = "#" + heading.id;
+                // Listenelement und Link erstellen
+                const li = document.createElement("li");
+                const a = document.createElement("a");
 
-        li.appendChild(a);
-        tocList.appendChild(li);
-    });
-});
-</script>
+                a.textContent = heading.textContent;
+                a.href = "#" + heading.id;
+
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+        });
+    </script>
 
 
 </body>
