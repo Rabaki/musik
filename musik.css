@@ -587,3 +587,22 @@ a:focus-visible {
         flex-direction: column;
     }
 }
+
+@media (max-width: 768px) {
+    /* ... bestehende Regeln ... */
+
+    .noten {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Skaliert das Noten-SVG responsiv auf die Bildschirmbreite */
+    .noten svg {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+}
