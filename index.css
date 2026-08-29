@@ -739,3 +739,17 @@ a:focus-visible {
     background-color: var(--surface);
     border-color: var(--gold);
 }
+
+@media (max-width: 768px) {
+    #toc-container {
+        top: 60px;
+        left: 14px !important;
+        right: 14px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        max-height: 70vh;
+        padding: 16px;
+        z-index: 1000;
+    }
+}
