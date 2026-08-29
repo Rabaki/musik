@@ -710,3 +710,197 @@ a:focus-visible {
 .noten-container.aktiv {
     display: block !important;
 }
+
+
+
+
+
+@media print {
+    /* 1. Browser-Ränder entfernen */
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    /* 2. Hintergrund auf Karten-Farbe (var(--surface)) anpassen */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: var(--surface) !important; /* Exakt die Hintergrundfarbe der Karte */
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 3. 1:1 Farb- und SVG-Wiedergabe */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* 4. Navbar, Menü, Buttons & H1 ausblenden */
+    .navbar,
+    #toc-container,
+    .theme-btn,
+    h1 {
+        display: none !important;
+    }
+
+    /* 5. Inaktive Karten verstecken */
+    .noten-container {
+        display: none !important;
+    }
+
+    /* 6. Zickzack-Muster oben entfernen */
+    .noten-container::before,
+    .noten-container.aktiv::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    /* 7. Aktive Karte bündig ohne Rahmen/Schatten darstellen */
+    .noten-container.aktiv {
+        display: block !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 28px 30px !important;
+        padding-top: 20px !important;
+        background: transparent !important; /* Verschmilzt nahtlos mit dem Body */
+        border: none !important;             /* Entfernt alle Ränder für einen sauberen Look */
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 8. Liedtext auf die nächste Seite schieben */
+    .langeslied {
+        page-break-before: always !important;
+        break-before: page !important;
+        padding-top: 28px !important;
+    }
+
+    /* 9. EXAKT 2 SPALTEN ERZWINGEN */
+    .lied-spalten {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 40px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .lied-spalten .spalte {
+        flex: 1 1 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+        box-sizing: border-box !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
+
+
+
+@media print {
+    /* 1. Browser-Ränder entfernen */
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    /* 2. Hintergrund auf Karten-Farbe (var(--surface)) anpassen */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: var(--surface) !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 3. 1:1 Farb- und SVG-Wiedergabe */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* 4. Navbar, Menü, Buttons & H1 ausblenden */
+    .navbar,
+    #toc-container,
+    .theme-btn,
+    h1 {
+        display: none !important;
+    }
+
+    /* 5. Inaktive Karten verstecken */
+    .noten-container {
+        display: none !important;
+    }
+
+    /* 6. Zickzack-Muster oben entfernen */
+    .noten-container::before,
+    .noten-container.aktiv::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    /* 7. Aktive Karte bündig ohne Rahmen/Schatten darstellen */
+    .noten-container.aktiv {
+        display: block !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 28px 30px !important;
+        padding-top: 20px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 8. Fix für Überschriften: Rand exakt an die Textlänge anpassen */
+    h2, h3 {
+        display: table !important;
+        width: auto !important;
+        max-width: fit-content !important;
+    }
+
+    /* 9. Liedtext auf die nächste Seite schieben */
+    .langeslied {
+        page-break-before: always !important;
+        break-before: page !important;
+        padding-top: 28px !important;
+    }
+
+    /* 10. EXAKT 2 SPALTEN ERZWINGEN */
+    .lied-spalten {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 40px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .lied-spalten .spalte {
+        flex: 1 1 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+        box-sizing: border-box !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
+
+
+
+
+
+
+
+
+

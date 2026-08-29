@@ -86,3 +86,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+document.getElementById('print-btn').addEventListener('click', () => {
+    const activeSection = document.querySelector('.noten-container.aktiv');
+    if (!activeSection) {
+        alert('Bitte wähle zuerst einen Abschnitt aus.');
+        return;
+    }
+    window.print();
+});
+
+
