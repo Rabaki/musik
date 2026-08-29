@@ -16,22 +16,16 @@
 <body>
 
     <nav class="navbar">
-        <div class="navbar-brand">
-            <span class="material-symbols-outlined">music_note</span>
-            <span>Musikunterricht</span>
+        <div class="navbar-brand" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <span id="inhaltverzeichnis_ein">Musikunterricht</span>
         </div>
 
         <div class="navbar-menu">
-            <a href="#toc-container">Inhalt</a>
             <button id="theme-toggle" class="theme-btn" aria-label="Theme wechseln">
                 <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
             </button>
         </div>
     </nav>
-
-    <h1>
-        Musik VERSION
-    </h1>
 
     <div class="noten-container" id="toc-container">
         <h2>Inhaltsverzeichnis</h2>
@@ -181,7 +175,7 @@
         </table>
     </div>
 
-      <div class="noten-container">
+    <div class="noten-container">
         <h2>Vorzeichen (Maqam-Intervalle)</h2>
         <table class="noten-tabelle">
             <thead>
@@ -346,7 +340,7 @@
     </div>
 
 
-  
+
 
 
     <div class="noten-container">
@@ -715,6 +709,43 @@
             </tbody>
         </table>
     </div>
+
+
+
+    <script>
+
+        const trigger = document.getElementById('inhaltverzeichnis_ein');
+        const toc = document.getElementById('toc-container');
+        let closeTimeout;
+
+        function showMenu() {
+            clearTimeout(closeTimeout);
+            toc.style.display = 'block';
+        }
+
+        function hideMenu() {
+            closeTimeout = setTimeout(() => {
+                toc.style.display = 'none';
+            }, 250);
+        }
+
+        trigger.addEventListener('mouseenter', showMenu);
+        trigger.addEventListener('mouseleave', hideMenu);
+        toc.addEventListener('mouseenter', showMenu);
+        toc.addEventListener('mouseleave', hideMenu);
+
+        // Schließt das Menü sofort, wenn ein Kapitel ausgewählt wird
+        toc.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                toc.style.display = 'none';
+            }
+        });
+
+    </script>
+
+
 </body>
+
+
 
 </html>

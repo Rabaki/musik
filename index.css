@@ -583,6 +583,7 @@ a:focus-visible {
 }
 
 @media (max-width: 768px) {
+
     /* Verhindert, dass der umgebende Container überstehende Pixel abschneidet */
     .noten-container {
         overflow-x: hidden;
@@ -602,4 +603,105 @@ a:focus-visible {
         height: auto !important;
         display: block;
     }
+}
+
+
+
+/* ---------- Inhaltsverzeichnis (Fixed Overlay) ---------- */
+
+#inhaltverzeichnis_ein {
+    cursor: pointer;
+    user-select: none;
+}
+
+#toc-container {
+    display: none;
+    position: fixed;
+    top: 73px;
+    /* Direkt unter der Sticky-Navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Exakt horizontal in der Bildschirmmitte zentriert */
+
+    width: calc(100% - 64px);
+    max-width: 1600px;
+    max-height: calc(85vh - 70px);
+    overflow-y: auto;
+
+    z-index: 1000;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 10px;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    margin: 0;
+
+    background: var(--surface-alt);
+    border: 1.5px solid var(--rug-red);
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.45),
+        0 0 20px color-mix(in srgb, var(--rug-red) 25%, transparent);
+}
+
+#toc-container::before {
+    display: none;
+}
+
+
+/* Scrollbar für das Dropdown-Menü */
+#toc-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#toc-container::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 3px;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    #toc-container {
+        top: 60px;
+        width: calc(100% - 28px);
+        padding: 18px 14px;
+    }
+}
+
+/* ---------- Trigger: Inhaltsverzeichnis Button ---------- */
+
+#inhaltverzeichnis_ein {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    /* Rahmen & Hintergrund */
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    /* Eleganter Pill-Look */
+    background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
+    color: var(--gold-soft);
+
+    /* Typografie & Effekte */
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+}
+
+/* Hover- & Fokus-Zustand (Signalisiert Klickbarkeit) */
+#inhaltverzeichnis_ein:hover {
+    border-color: var(--gold);
+    background: var(--surface-alt);
+    color: var(--gold);
+    box-shadow: 0 2px 8px rgba(7, 140, 29, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Klick-Feedback */
+#inhaltverzeichnis_ein:active {
+    transform: translateY(0) scale(0.97);
 }
