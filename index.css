@@ -699,3 +699,14 @@ a:focus-visible {
         padding: 16px;
     }
 }
+
+
+/* Versteckt alle Inhaltskarten standardmäßig (außer das Dropdown-Menü) */
+.noten-container:not(#toc-container) {
+    display: none;
+}
+
+/* Macht die ausgewählte Karte sichtbar */
+.noten-container.aktiv {
+    display: block !important;
+}

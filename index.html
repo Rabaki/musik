@@ -33,7 +33,6 @@
     </div>
 
 
-
     <div class="noten-container">
         <h2>2,5 Oktaven (Gesamtübersicht)</h2>
         <div class="noten">
@@ -613,154 +612,78 @@
                 </tr>
             </tbody>
         </table>
-        <h2>Übersicht der Oktaven und Tonsilben</h2>
-        <table class="noten-tabelle">
-            <thead>
-                <tr>
-                    <th>Note</th>
-                    <th>Nom</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                <!-- ZWISCHENHEADER 1 -->
-                <tr class="tabellen-zwischenheader">
-                    <td colspan="2">Große Oktave (teilweise) & Kleine Oktave (Teil 1)</td>
-                </tr>
-                <tr>
-                    <td>A,</td>
-                    <td>LA</td>
-                </tr>
-                <tr>
-                    <td>B,</td>
-                    <td>SI</td>
-                </tr>
-                <tr>
-                    <td>C</td>
-                    <td>DO</td>
-                </tr>
-                <tr>
-                    <td>D</td>
-                    <td>RÉ</td>
-                </tr>
-                <tr>
-                    <td>E</td>
-                    <td>MI</td>
-                </tr>
-                <tr>
-                    <td>F</td>
-                    <td>FA</td>
-                </tr>
-                <tr>
-                    <td>G</td>
-                    <td>SOL</td>
-                </tr>
-
-                <!-- ZWISCHENHEADER 2 -->
-                <tr class="tabellen-zwischenheader">
-                    <td colspan="2">Kleine Oktave (Ende) & Eingestrichene Oktave</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>LA</td>
-                </tr>
-                <tr>
-                    <td>B</td>
-                    <td>SI</td>
-                </tr>
-                <tr>
-                    <td>c</td>
-                    <td>DO</td>
-                </tr>
-                <tr>
-                    <td>d</td>
-                    <td>RÉ</td>
-                </tr>
-                <tr>
-                    <td>e</td>
-                    <td>MI</td>
-                </tr>
-                <tr>
-                    <td>f</td>
-                    <td>FA</td>
-                </tr>
-                <tr>
-                    <td>g</td>
-                    <td>SOL</td>
-                </tr>
-
-                <!-- ZWISCHENHEADER 3 -->
-                <tr class="tabellen-zwischenheader">
-                    <td colspan="2">Zweigestrichene Oktave (Anfang)</td>
-                </tr>
-                <tr>
-                    <td>a</td>
-                    <td>LA</td>
-                </tr>
-                <tr>
-                    <td>b</td>
-                    <td>SI</td>
-                </tr>
-                <tr>
-                    <td>c'</td>
-                    <td>DO</td>
-                </tr>
-
-            </tbody>
-        </table>
+       
     </div>
 
 
 
     <script>
 
-      
-       const trigger = document.getElementById('inhaltverzeichnis_ein');
-const toc = document.getElementById('toc-container');
-let closeTimeout;
 
-// Menü öffnen / schließen Hilfsfunktionen
-function showMenu() {
-    clearTimeout(closeTimeout);
-    toc.style.display = 'block';
-}
+        const trigger = document.getElementById('inhaltverzeichnis_ein');
+        const toc = document.getElementById('toc-container');
+        let closeTimeout;
 
-function hideMenu() {
-    closeTimeout = setTimeout(() => {
-        toc.style.display = 'none';
-    }, 250);
-}
+        // Menü öffnen / schließen Hilfsfunktionen
+        function showMenu() {
+            clearTimeout(closeTimeout);
+            toc.style.display = 'block';
+        }
 
-// 1. PC: Reines Hover-Verhalten (nur aktiv, wenn eine echte Maus da ist)
-if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    trigger.addEventListener('mouseenter', showMenu);
-    trigger.addEventListener('mouseleave', hideMenu);
-    toc.addEventListener('mouseenter', showMenu);
-    toc.addEventListener('mouseleave', hideMenu);
-}
+        function hideMenu() {
+            closeTimeout = setTimeout(() => {
+                toc.style.display = 'none';
+            }, 250);
+        }
 
-// 2. HANDY & CLICK: Umschalten per Klick/Tap
-trigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isVisible = toc.style.display === 'block';
-    toc.style.display = isVisible ? 'none' : 'block';
-});
+        // 1. PC: Reines Hover-Verhalten (nur aktiv, wenn eine echte Maus da ist)
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            trigger.addEventListener('mouseenter', showMenu);
+            trigger.addEventListener('mouseleave', hideMenu);
+            toc.addEventListener('mouseenter', showMenu);
+            toc.addEventListener('mouseleave', hideMenu);
+        }
 
-// Schließen beim Antippen außerhalb des Menüs
-document.addEventListener('click', (e) => {
-    if (!toc.contains(e.target) && e.target !== trigger) {
-        toc.style.display = 'none';
-    }
-});
+        // 2. HANDY & CLICK: Umschalten per Klick/Tap
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isVisible = toc.style.display === 'block';
+            toc.style.display = isVisible ? 'none' : 'block';
+        });
 
-// Schließen bei Klick auf einen Menü-Link
-toc.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-        toc.style.display = 'none';
-    }
-});
+        // Schließen beim Antippen außerhalb des Menüs
+        document.addEventListener('click', (e) => {
+            if (!toc.contains(e.target) && e.target !== trigger) {
+                toc.style.display = 'none';
+            }
+        });
+
+        // Schließen bei Klick auf einen Menü-Link
+        toc.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                toc.style.display = 'none';
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     </script>
 
+    <script src="index_2.js"></script>
+
+  
 
 </body>
 
