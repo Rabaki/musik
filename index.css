@@ -605,69 +605,6 @@ a:focus-visible {
     }
 }
 
-
-
-/* ---------- Inhaltsverzeichnis (Fixed Overlay) ---------- */
-
-#inhaltverzeichnis_ein {
-    cursor: pointer;
-    user-select: none;
-}
-
-#toc-container {
-    display: none;
-    position: fixed;
-    top: 73px;
-    /* Direkt unter der Sticky-Navbar */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Exakt horizontal in der Bildschirmmitte zentriert */
-
-    width: calc(100% - 64px);
-    max-width: 1600px;
-    max-height: calc(85vh - 70px);
-    overflow-y: auto;
-
-    z-index: 1000;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 10px 10px;
-    box-shadow: var(--shadow);
-    box-sizing: border-box;
-    margin: 0;
-
-    background: var(--surface-alt);
-    border: 1.5px solid var(--rug-red);
-    box-shadow:
-        0 16px 36px rgba(0, 0, 0, 0.45),
-        0 0 20px color-mix(in srgb, var(--rug-red) 25%, transparent);
-}
-
-#toc-container::before {
-    display: none;
-}
-
-
-/* Scrollbar für das Dropdown-Menü */
-#toc-container::-webkit-scrollbar {
-    width: 6px;
-}
-
-#toc-container::-webkit-scrollbar-thumb {
-    background: var(--line);
-    border-radius: 3px;
-}
-
-/* Mobile Ansicht */
-@media (max-width: 768px) {
-    #toc-container {
-        top: 60px;
-        width: calc(100% - 28px);
-        padding: 18px 14px;
-    }
-}
-
 /* ---------- Trigger: Inhaltsverzeichnis Button ---------- */
 
 #inhaltverzeichnis_ein {
@@ -676,53 +613,18 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
-    /* Rahmen & Hintergrund */
     padding: 6px 14px;
     border: 1px solid var(--line);
     border-radius: 20px;
-    /* Eleganter Pill-Look */
     background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
     color: var(--gold-soft);
-
-    /* Typografie & Effekte */
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     transition: all 0.25s ease;
 }
 
-/* Hover- & Fokus-Zustand (Signalisiert Klickbarkeit) */
-#inhaltverzeichnis_ein:hover {
-    border-color: var(--gold);
-    background: var(--surface-alt);
-    color: var(--gold);
-    box-shadow: 0 2px 8px rgba(7, 140, 29, 0.15);
-    transform: translateY(-1px);
-}
-
-/* Klick-Feedback */
-#inhaltverzeichnis_ein:active {
-    transform: translateY(0) scale(0.97);
-}
-
-/* Basis-Styling des Buttons */
-#inhaltverzeichnis_ein {
-    cursor: pointer;
-    user-select: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
-    color: var(--gold-soft);
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-}
-
-/* 1. PC: Hover-Effekt (nur sichtbar auf Geräten mit Maus) */
+/* PC: Hover-Effekt (nur auf Geräten mit echter Maus) */
 @media (hover: hover) and (pointer: fine) {
     #inhaltverzeichnis_ein:hover {
         border-color: var(--gold);
@@ -733,12 +635,57 @@ a:focus-visible {
     }
 }
 
-/* 2. HANDY: Klick-Feedback beim Antippen mit dem Finger */
+/* Touchscreens: Klick-/Tap-Feedback */
 #inhaltverzeichnis_ein:active {
     transform: scale(0.95);
     background-color: var(--surface);
     border-color: var(--gold);
 }
+
+
+/* ---------- Dropdown: Inhaltsverzeichnis Overlay ---------- */
+
+#toc-container {
+    display: none;
+    position: fixed;
+    top: 73px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 64px);
+    max-width: 1600px;
+    max-height: calc(85vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    z-index: 1000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--surface-alt);
+    border: 1.5px solid var(--rug-red);
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.45),
+        0 0 20px color-mix(in srgb, var(--rug-red) 25%, transparent);
+}
+
+/* Zierstreifen der regulären Karten im Dropdown ausblenden */
+#toc-container::before {
+    display: none;
+}
+
+/* Scrollbar-Design */
+#toc-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#toc-container::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 3px;
+}
+
+
+/* ---------- Mobile Optimierung (bis 768px) ---------- */
 
 @media (max-width: 768px) {
     #toc-container {
@@ -750,6 +697,5 @@ a:focus-visible {
         transform: none !important;
         max-height: 70vh;
         padding: 16px;
-        z-index: 1000;
     }
 }
