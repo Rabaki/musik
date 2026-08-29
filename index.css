@@ -401,12 +401,6 @@ h3 {
     vertical-align: middle;
 }
 
-/* Maqam-Tabelle: leicht wärmerer Akzent für arabische Begriffe */
-.maqam-tabelle th {
-    background: var(--th-maqam-grad);
-    color: var(--th-maqam-color);
-}
-
 .arab-text {
     font-size: 1.15rem;
     line-height: 1.5;
