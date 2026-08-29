@@ -705,3 +705,37 @@ a:focus-visible {
 #inhaltverzeichnis_ein:active {
     transform: translateY(0) scale(0.97);
 }
+
+/* Basis-Styling des Buttons */
+#inhaltverzeichnis_ein {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
+    color: var(--gold-soft);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* 1. PC: Hover-Effekt (nur sichtbar auf Geräten mit Maus) */
+@media (hover: hover) and (pointer: fine) {
+    #inhaltverzeichnis_ein:hover {
+        border-color: var(--gold);
+        background: var(--surface-alt);
+        color: var(--gold);
+        box-shadow: 0 2px 8px rgba(7, 140, 29, 0.15);
+        transform: translateY(-1px);
+    }
+}
+
+/* 2. HANDY: Klick-Feedback beim Antippen mit dem Finger */
+#inhaltverzeichnis_ein:active {
+    transform: scale(0.95);
+    background-color: var(--surface);
+    border-color: var(--gold);
+}

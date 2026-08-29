@@ -714,33 +714,51 @@
 
     <script>
 
-        const trigger = document.getElementById('inhaltverzeichnis_ein');
-        const toc = document.getElementById('toc-container');
-        let closeTimeout;
+      
+       const trigger = document.getElementById('inhaltverzeichnis_ein');
+const toc = document.getElementById('toc-container');
+let closeTimeout;
 
-        function showMenu() {
-            clearTimeout(closeTimeout);
-            toc.style.display = 'block';
-        }
+// Menü öffnen / schließen Hilfsfunktionen
+function showMenu() {
+    clearTimeout(closeTimeout);
+    toc.style.display = 'block';
+}
 
-        function hideMenu() {
-            closeTimeout = setTimeout(() => {
-                toc.style.display = 'none';
-            }, 250);
-        }
+function hideMenu() {
+    closeTimeout = setTimeout(() => {
+        toc.style.display = 'none';
+    }, 250);
+}
 
-        trigger.addEventListener('mouseenter', showMenu);
-        trigger.addEventListener('mouseleave', hideMenu);
-        toc.addEventListener('mouseenter', showMenu);
-        toc.addEventListener('mouseleave', hideMenu);
+// 1. PC: Reines Hover-Verhalten (nur aktiv, wenn eine echte Maus da ist)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    trigger.addEventListener('mouseenter', showMenu);
+    trigger.addEventListener('mouseleave', hideMenu);
+    toc.addEventListener('mouseenter', showMenu);
+    toc.addEventListener('mouseleave', hideMenu);
+}
 
-        // Schließt das Menü sofort, wenn ein Kapitel ausgewählt wird
-        toc.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                toc.style.display = 'none';
-            }
-        });
+// 2. HANDY & CLICK: Umschalten per Klick/Tap
+trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isVisible = toc.style.display === 'block';
+    toc.style.display = isVisible ? 'none' : 'block';
+});
 
+// Schließen beim Antippen außerhalb des Menüs
+document.addEventListener('click', (e) => {
+    if (!toc.contains(e.target) && e.target !== trigger) {
+        toc.style.display = 'none';
+    }
+});
+
+// Schließen bei Klick auf einen Menü-Link
+toc.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        toc.style.display = 'none';
+    }
+});
     </script>
 
 
