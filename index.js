@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         element.textContent = "";
 
-        
+
 
         // Zeichnen durch ABCJS (VORHER: scale: 2, staffwidth: 1100)
         ABCJS.renderAbc(element, notation, {
@@ -309,4 +309,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tocList = document.getElementById("table-of-contents");
+    // Alle h2-Überschriften auf der Seite auswählen (ausgenommen die h2 des Inhaltsverzeichnisses selbst)
+    const headings = document.querySelectorAll(".noten-container:not(#toc-container) h2");
+
+    headings.forEach((heading, index) => {
+        // Prüfen, ob das Element sichtbar ist (ignoriert display: none)
+        if (heading.offsetParent === null) return;
+
+        // ID für die Überschrift vergeben, falls noch keine vorhanden ist
+        if (!heading.id) {
+            heading.id = "section-" + index;
+        }
+
+        // Listenelement und Link erstellen
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.textContent = heading.textContent;
+        a.href = "#" + heading.id;
+
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
 });
