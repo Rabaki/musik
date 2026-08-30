@@ -198,8 +198,11 @@ document.addEventListener("DOMContentLoaded", function () {
             responsive: "resize"
         });
 
+
+        var keinStrich = el.getAttribute('data-durchstrich') === 'false';
+
         // Strich NUR in der Tabellenzeile für Halb-B / Koron
-        if (abcCode.includes('K:F') || abcCode.includes('_2/4') || abcCode.includes('K: F')) {
+        if ( !keinStrich && abcCode.includes('K:F') || abcCode.includes('_2/4') || abcCode.includes('K: F')) {
             const svg = el.querySelector('svg');
             if (svg) {
                 const clef = svg.querySelector('.abcjs-clef') || svg.querySelector('path');
