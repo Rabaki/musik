@@ -496,7 +496,7 @@ a:focus-visible {
     padding: 6px 14px;
     border: 1px solid var(--line);
     border-radius: 20px;
-    background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
+    background: color-mix(in srgb, var(--surface-alt) 100%, transparent);
     color: var(--gold-soft);
     font-size: 0.95rem;
     font-weight: 500;
