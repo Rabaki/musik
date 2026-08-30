@@ -22,7 +22,8 @@
 
     <nav class="navbar">
         <div class="navbar-brand" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-            <span id="inhaltverzeichnis_ein">Musikunterricht</span>
+            <span id="inhaltverzeichnis_ein" data-key="music">Cours de musique</span>
+
         </div>
 
         <div class="navbar-menu">
@@ -33,20 +34,21 @@
                 </button>
 
                 <div id="lang-menu" class="lang-dropdown-menu">
-                    <button class="lang-option" data-flag="🇫🇷" type="button">
+                    <button class="lang-option" data-lang="fr" data-flag="🇫🇷" type="button">
                         <span class="flag-icon">🇫🇷</span>
                         <span class="lang-text">Français</span>
                     </button>
-                    <button class="lang-option" data-flag="🇩🇪" type="button">
+                    <button class="lang-option" data-lang="de" data-flag="🇩🇪" type="button">
                         <span class="flag-icon">🇩🇪</span>
                         <span class="lang-text">Deutsch</span>
                     </button>
-                    <button class="lang-option" data-flag="🇸🇦" type="button">
+                    <button class="lang-option" data-lang="ar" data-flag="🇸🇦" type="button">
                         <span class="flag-icon">🇸🇦</span>
                         <span class="lang-text">العربية</span>
                     </button>
                 </div>
             </div>
+
 
             <button id="print-btn" class="theme-btn" title="Aktuellen Abschnitt als PDF herunterladen">
                 <span class="material-symbols-outlined">download</span>
