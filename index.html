@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="flagen.css">
+   <link rel="stylesheet" href="frequenz.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <script src="flagen.js"></script>
@@ -26,28 +27,28 @@
 
         <div class="navbar-menu">
 
-           <div class="lang-dropdown-wrapper">
-    <!-- Der runde Button, der die aktuelle Flagge anzeigt -->
-    <button id="lang-btn" class="theme-btn" type="button" aria-label="Sprache wählen">
-        <span id="current-flag">🇫🇷</span>
-    </button>
-    
-    <!-- Das Aufklapp-Menü -->
-    <div id="lang-menu" class="lang-dropdown-menu">
-        <button class="lang-option" data-flag="🇫🇷" type="button">
-            <span class="flag-icon">🇫🇷</span>
-            <span class="lang-text">Français</span>
-        </button>
-        <button class="lang-option" data-flag="🇩🇪" type="button">
-            <span class="flag-icon">🇩🇪</span>
-            <span class="lang-text">Deutsch</span>
-        </button>
-        <button class="lang-option" data-flag="🇸🇦" type="button">
-            <span class="flag-icon">🇸🇦</span>
-            <span class="lang-text">العربية</span>
-        </button>
-    </div>
-</div>
+            <div class="lang-dropdown-wrapper">
+                <!-- Der runde Button, der die aktuelle Flagge anzeigt -->
+                <button id="lang-btn" class="theme-btn" type="button" aria-label="Sprache wählen">
+                    <span id="current-flag">🇫🇷</span>
+                </button>
+
+                <!-- Das Aufklapp-Menü -->
+                <div id="lang-menu" class="lang-dropdown-menu">
+                    <button class="lang-option" data-flag="🇫🇷" type="button">
+                        <span class="flag-icon">🇫🇷</span>
+                        <span class="lang-text">Français</span>
+                    </button>
+                    <button class="lang-option" data-flag="🇩🇪" type="button">
+                        <span class="flag-icon">🇩🇪</span>
+                        <span class="lang-text">Deutsch</span>
+                    </button>
+                    <button class="lang-option" data-flag="🇸🇦" type="button">
+                        <span class="flag-icon">🇸🇦</span>
+                        <span class="lang-text">العربية</span>
+                    </button>
+                </div>
+            </div>
 
             <button id="print-btn" class="theme-btn" title="Aktuellen Abschnitt als PDF herunterladen">
                 <span class="material-symbols-outlined">download</span>
@@ -64,6 +65,69 @@
         <ul id="table-of-contents"></ul>
     </div>
 
+
+    <div class="noten-container">
+        <h2>Pano Tuner</h2>
+        <h3>DO RE MI (SI) oder DO RE MI</h3>
+
+        <div class="saz-stimmung">
+            <!-- Saitenchor 1 (LA) -->
+            <div class="saite-gruppe">
+                <div class="saite-ton">LA</div>
+                <div class="saite-linien">
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="saite-frequenzen">
+                    <div>109</div>
+                    <div>220</div>
+                </div>
+            </div>
+
+            <!-- Saitenchor 2 (SOL) -->
+            <div class="saite-gruppe">
+                <div class="saite-ton">SOL</div>
+                <div class="saite-linien">
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="saite-frequenzen">
+                    <div>195</div>
+                    <div>195</div>
+                </div>
+            </div>
+
+            <!-- Saitenchor 3 (RE) -->
+            <div class="saite-gruppe">
+                <div class="saite-ton">RE</div>
+                <div class="saite-linien">
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="saite-frequenzen">
+                    <div>146</div>
+                    <div>292</div>
+                    <div>292</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="noten-container">
         <h2>2,5 Oktaven (Gesamtübersicht)</h2>
