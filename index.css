@@ -735,7 +735,7 @@ a:focus-visible {
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
+        accent-color: exact !important;
     }
 
     /* 4. Navbar, Menü, Buttons & H1 ausblenden */
@@ -823,7 +823,7 @@ a:focus-visible {
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
+        accent-color: exact !important;
     }
 
     /* 4. Navbar, Menü, Buttons & H1 ausblenden */
