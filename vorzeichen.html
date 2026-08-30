@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/flagen.css">
+    <link rel="stylesheet" href="css/frequenz.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.2.2/abcjs-basic-min.js" type="text/javascript"></script>
+    <script src="js/verzeichnis.js"></script>    
+    <script src="js/languages.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/noten.js"></script>
+
+</head>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="noten-container" id="toc-container">
+        <h2>Inhaltsverzeichnis</h2>
+        <ul id="table-of-contents"></ul>
+    </div>
+
+     <div class="noten-container">
+        <h2>Vorzeichen (Maqam-Intervalle)</h2>
+        <table class="noten-tabelle">
+            <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Nom (Name)</th>
+                    <th>Description (Bedeutung)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Kreuz (Diesis) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n^A"></div>
+                    </td>
+                    <td class="arab-text red-text">دييز</td>
+                    <td class="arab-text blue-text">رفع النغمة<br>نصف درجة</td>
+                </tr>
+                <tr>
+                    <!-- Be (Bemol) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n_A"></div>
+                    </td>
+                    <td class="arab-text red-text">بيمول</td>
+                    <td class="arab-text blue-text">خفض النغمة<br>نصف درجة</td>
+                </tr>
+                <tr>
+                    <!-- Halbes Be / Koron (Viertelton tiefer) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:F\nx"></div>
+                    </td>
+                    <td class="arab-text red-text">نصف بيمول</td>
+                    <td class="arab-text blue-text">خفض النغمة<br>ربع درجة</td>
+                </tr>
+
+
+
+                <tr>
+                    <!-- Auflösungszeichen (Bikar) -->
+                    <td>
+                        <div class="note-render" data-abc="X:1\nK:none\n=A"></div>
+                    </td>
+                    <td class="arab-text red-text">بيكار</td>
+                    <td class="arab-text blue-text">إلغاء علامات<br>التحويل</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+   
+
+</body>
+
+</html>

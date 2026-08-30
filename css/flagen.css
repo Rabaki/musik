@@ -1,0 +1,85 @@
+/* ---------- Sprachauswahl (Navbar Dropdown) ---------- */
+
+.lang-dropdown-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+#lang-btn {
+    font-size: 1.15rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#current-flag {
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(-0.5px);
+}
+
+.lang-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 14px);
+    right: -5px;
+    min-width: 145px;
+    background: var(--surface-alt);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lang-dropdown-menu.open {
+    display: flex;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lang-option .flag-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.lang-option .lang-text {
+    flex: 1;
+}
+
+.lang-option:hover {
+    background: var(--surface);
+    color: var(--gold);
+}
+
+.lang-option:active {
+    transform: scale(0.97);
+}
+
+/* Im Druck ausblenden */
+@media print {
+    .lang-dropdown-wrapper {
+        display: none !important;
+    }
+}

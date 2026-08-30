@@ -1,0 +1,105 @@
+
+/* ---------- Saz Stimmung (Vertikale Chöre untereinander) ---------- */
+
+.saz-stimmung {
+    display: flex;
+    flex-direction: column; /* Stapelt LA, SOL, RE übereinander */
+    gap: 16px;
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 90%;
+    background: var(--surface-alt);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.saite-gruppe {
+    display: grid;
+    /* Spalte 1: Ton (LA) | Spalte 2: Saiten (hr) | Spalte 3: Frequenzen (Hz) */
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.saite-gruppe:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+}
+
+/* Tonbezeichnung (links) */
+.saite-ton {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--gold-soft);
+    text-align: left;
+}
+
+/* Saitenlinien (Mitte) */
+.saite-linien {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.saite-linien hr {
+    border: none;
+    height: 2px;
+    background: var(--line);
+    margin: 0;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.saite-gruppe:hover .saite-linien hr {
+    background: var(--teal);
+}
+
+/* Frequenzen (rechts) */
+.saite-frequenzen {
+    display: flex;
+    flex-direction: column; /* Setzt auch die Frequenzen passend zu den Saiten */
+    gap: 6px;
+    text-align: right;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.saite-frequenzen div::after {
+    content: " Hz";
+    font-size: 0.75rem;
+    opacity: 0.65;
+}
+
+/* ---------- Mobile Optimierung ---------- */
+
+@media (max-width: 768px) {
+    .saz-stimmung {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .saite-gruppe {
+        grid-template-columns: 50px 1fr auto;
+        gap: 12px;
+        padding: 10px 12px;
+    }
+
+    .saite-ton {
+        font-size: 1.05rem;
+    }
+
+    .saite-frequenzen {
+        font-size: 0.8rem;
+    }
+}
