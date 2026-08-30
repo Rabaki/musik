@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PANO-TUNER</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/flagen.css">
+    <link rel="stylesheet" href="css/frequenz.css">
+    <link rel="stylesheet" href="css/saz.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.2.2/abcjs-basic-min.js" type="text/javascript"></script>
+    <script src="js/verzeichnis.js"></script>    
+    <script src="js/languages.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/noten.js"></script>
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="noten-container" id="toc-container">
+        <h2>Inhaltsverzeichnis</h2>
+        <ul id="table-of-contents"></ul>
+    </div>
+
+
+
+    <div class="noten-container saaz-wrapper">
+        <h2>Saz</h2>
+
+
+
+        <!-- OBERER PFEIL: DIESIS (Zeigt nach rechts) -->
+        <div class="orientierung-leiste leiste-mitte">
+            <div class="richtung-pfeil nach-rechts">
+                <span class="pfeil-text">♯ Diesis (höher)</span>
+                <span class="pfeil-linie"></span>
+            </div>
+        </div>
+
+        <!-- GRIFFBRETT -->
+        <div class="griffbrett-scroll">
+            <div class="griffbrett">
+                <!-- Saitenverlauf -->
+                <div class="saiten-ebene">
+                    <div class="saiten-chor">
+                        <div class="saite"></div>
+                        <div class="saite"></div>
+                    </div>
+                    <div class="saiten-chor">
+                        <div class="saite"></div>
+                        <div class="saite"></div>
+                    </div>
+                    <div class="saiten-chor">
+                        <div class="saite"></div>
+                        <div class="saite"></div>
+                        <div class="saite"></div>
+                    </div>
+                </div>
+
+                <!-- Sattel / Leersaiten -->
+                <div class="bund sattel">
+                    <div class="slot"><span class="note">LA</span></div>
+                    <div class="slot"><span class="note">SOL</span></div>
+                    <div class="slot"><span class="note">RE</span></div>
+                </div>
+
+                <!-- Bünde -->
+                <div class="bund b-xl">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-m">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+
+                <div class="bund b-m">
+                    <div class="slot"></div>
+                    <div class="slot" style="margin-left: 30px;"><span class="note">LA</span></div>
+                    <div class="slot"><span class="note">MI</span></div>
+                    <div class="bund-punkt"></div>
+                </div>
+
+                <div class="bund b-lg">
+                    <div class="slot"><span class="note">DO</span></div>
+                    <div class="slot" style="margin-left: 50px;"><span class="note">SI''</span></div>
+                    <div class="slot"><span class="note">FA</span></div>
+                    <div class="bund-punkt"></div>
+                </div>
+
+                <div class="bund b-m">
+                    <div class="slot"></div>
+                    <div class="slot"><span class="note">SI'</span></div>
+                    <div class="slot"></div>
+                </div>
+
+                <div class="bund b-m">
+                    <div class="slot"></div>
+                    <div class="slot"><span class="note">SI</span></div>
+                    <div class="slot"></div>
+                </div>
+
+                <div class="bund b-lg">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"><span class="note">SOL</span></div>
+                    <div class="bund-punkt"></div>
+                </div>
+
+                <div class="bund b-md">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"><span class="note">LA</span></div>
+                    <div class="bund-punkt"></div>
+                </div>
+
+                <div class="bund b-md">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="bund-punkt"></div>
+                </div>
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-md">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="bund-punkt"></div>
+                </div>
+                <div class="bund b-md">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+                <div class="bund b-sm">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="bund-punkt"></div>
+                </div>
+                <div class="bund b-md">
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+
+                <!-- Bund mit Doppelpunkt -->
+                <div class="bund b-m doppelpunkt-bund">
+                    <div class="bund-punkt doppel-oben"></div>
+                    <div class="bund-punkt doppel-unten"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- UNTERER PFEIL: B-MOLL (Zeigt nach links) -->
+        <div class="orientierung-leiste leiste-mitte">
+            <div class="richtung-pfeil nach-links">
+                <span class="pfeil-linie"></span>
+                <span class="pfeil-text">♭ B-moll (tiefer)</span>
+            </div>
+        </div>
+
+        <!-- HINWEIS-KARTE ZU DEN VIERTELTÖNEN (Ganz unten & zentriert) -->
+        <div class="orientierung-hinweis">
+            <div class="hinweis-titel">Koma- & B-Notation</div>
+            <div class="hinweis-eintraege">
+                <div class="hinweis-item">
+                    <span class="badge">SI'</span>
+                    <span class="erklaerung">SI 1-Koma b (Halb-B-moll)</span>
+                </div>
+                <div class="hinweis-item">
+                    <span class="badge">SI''</span>
+                    <span class="erklaerung">SI 2-Koma / B-moll</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+</body>
+
+</html>

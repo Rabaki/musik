@@ -9,6 +9,7 @@
 const SEITEN_LISTE = [
     { url: "index.html", title: "Startseite" },
     { url: "pano_tuner.html", title: "Pano Tuner" },
+    { url: "saz.html", title: "Saz" },
     { url: "oktaven.html", title: "2,5 Oktaven (Gesamtübersicht)" },
     { url: "notenwerte.html", title: "Notenwerte und Symbole" },
     { url: "pausen.html", title: "Nom du silence (Pausenwerte)" },
