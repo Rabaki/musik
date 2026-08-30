@@ -13,14 +13,14 @@ const SEITEN_LISTE = [
     { url: "notenwerte.html", title: "Notenwerte und Symbole" },
     { url: "pausen.html", title: "Nom du silence (Pausenwerte)" },
     { url: "vorzeichen.html", title: "Vorzeichen (Maqam-Intervalle)" },
+    { url: "notennamen.html", title: "Notennamen im Vergleich" },
     { url: "uebung_la_mi.html", title: "Übung: la, mi" },
     { url: "uebung_la_mi_re.html", title: "Übung: la, mi, re" },
     { url: "tonleiter_uebung.html", title: "Tonleiter-Übungen" },
     { url: "de_lori_lori.html", title: "De Lorî Lorî" },
     { url: "le_dine.html", title: "Lê dînê" },
     { url: "buke_delale.html", title: "Bûkê Delalê" },
-    { url: "buka_barane.html", title: "Bûka baranê" },
-    { url: "notennamen.html", title: "Notennamen im Vergleich" }
+    { url: "buka_barane.html", title: "Bûka baranê" }
 ];
 
 /* ==========================================================================
